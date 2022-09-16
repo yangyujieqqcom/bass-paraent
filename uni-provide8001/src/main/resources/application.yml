@@ -1,0 +1,32 @@
+
+spring:
+  redis:
+    port: 6379
+    host: localhost
+  devtools:
+    livereload:
+      port: 12321
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: 123456
+    username: root
+    url: jdbc:mysql://localhost:3306/bass_project
+  application:
+    name: cloud-provide9001-serve
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    listener:
+      simple:
+        acknowledge-mode: manual
+server:
+  port: 8001
+eureka:
+ client:
+   fetch-registry: true
+   register-with-eureka: true
+   service-url:
+      defaultZone: http://localhost:8003/eureka
+
